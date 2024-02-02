@@ -1,17 +1,116 @@
-#readingRuler {
-    position: absolute;
-    width: 30%;
-    height: 20px;
-    background-color: rgba(255, 255, 0, 0.5);
-    pointer-events: none;
-    display: none;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-  #readingRuler::after {
-    content: '→';
-    font-size: 20px;
-    position: absolute;
-    left: 0;
-    line-height: 0.65;
-    top: 0;
-  }
+#readingRuler {
+  position: absolute;
+  width: 30%;
+  height: 20px;
+  background-color: rgba(255, 255, 0, 0.5);
+  pointer-events: none;
+  display: none;
+}
+
+#readingRuler::after {
+  content: '→';
+  font-size: 20px;
+  position: absolute;
+  left: 0;
+  line-height: 0.65;
+  top: 0;
+}
+
+/* Estilo do Ícone Flutuante */
+#accessibility-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1001;
+  /* Garante que o ícone fique acima do menu lateral */
+  cursor: pointer;
+  padding: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #007bff;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* TESTE */
+#accessibility-widget {
+  position: fixed;
+  top: 0;
+  right: -350px;
+  /* Esconde o menu inicialmente */
+  width: 350px;
+  height: 100%;
+  background: #efefef;
+  transition: left 0.3s;
+  /* Animação suave */
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  /* Abaixo do ícone flutuante */
+  display: flex;
+  flex-direction: column;
+}
+
+.widget-header {
+  background-color: #e9ecef;
+  font-size: 24px;
+  color: #333;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.widget-footer {
+  background-color: #e9ecef;
+  color: #333;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  position: fixed;
+  bottom: 0;
+  font-size: 0.875rem;
+  font-weight: lighter;
+}
+
+.widget-body {
+  padding: 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* Duas colunas */
+  gap: 10px;
+  overflow-y: auto;
+}
+
+.tool-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  flex-basis: 50%;
+  height: 100px;
+  font-size: 1rem;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.tool-btn:hover {
+  background-color: #f8f8f8;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
