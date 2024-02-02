@@ -1,0 +1,17 @@
+#readingRuler {
+    position: absolute;
+    width: 30%;
+    height: 20px;
+    background-color: rgba(255, 255, 0, 0.5);
+    pointer-events: none;
+    display: none;
+  }
+
+  #readingRuler::after {
+    content: '→';
+    font-size: 20px;
+    position: absolute;
+    left: 0;
+    line-height: 0.65;
+    top: 0;
+  }

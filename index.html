@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Acessibilidade Exemplo</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="readingRuler"></div>
+
+    <h1>Teste de Acessibilidade</h1>
+
+    <a href="#">Aqui é um link</a>
+
+    <p>
+      Este é um exemplo de texto para testar as funcionalidades de
+      acessibilidade.
+    </p>
+
+    <img
+      width="120"
+      src="https://s2-techtudo.glbimg.com/L9wb1xt7tjjL-Ocvos-Ju0tVmfc=/0x0:1200x800/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2023/q/l/TIdfl2SA6J16XZAy56Mw/canvaai.png"
+      alt="Teste"
+    />
+
+    <br>
+
+    <a href="#">Aqui é um link</a>
+
+    <div id="accessibility-tools">
+      <button onclick="toggleTextSize()">Aumentar Texto</button>
+      <button onclick="toggleHighContrast()">Contraste Alto</button>
+      <button onclick="speakPageContent()">Ler Conteúdo</button>
+      <button onclick="activeRuler()">Ativar Régua de Leitura</button>
+      <button onclick="toggleSaturation()">Ajustar Saturação</button>
+      <button onclick="highlightLinks()">Destacar Links</button>
+
+    </div>
+
+    <!-- Início do widget VLibras -->
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget("https://vlibras.gov.br/app");
+    </script>
+    <!-- Fim do widget VLibras -->
+
+    <script src="accessibility.js"></script>
+  </body>
+</html>
