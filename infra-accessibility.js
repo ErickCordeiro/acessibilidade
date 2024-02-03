@@ -239,13 +239,13 @@ function speakPageContent() {
 
 function activeRuler() {
   rulerActive = !rulerActive; // Inverte o estado da régua
-  document.getElementById("readingRuler").style.display = rulerActive
+  document.getElementById("infra-readingRuler").style.display = rulerActive
     ? "block"
     : "none";
 
   document.addEventListener("mousemove", function (e) {
     if (!rulerActive) return;
-    const ruler = document.getElementById("readingRuler");
+    const ruler = document.getElementById("infra-readingRuler");
     ruler.style.top = e.pageY + "px";
   });
 }
